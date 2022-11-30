@@ -21,11 +21,14 @@
 }
 
 .logo{
-    width: 10%;
-    padding-left: 10px;
-    padding-top: 20px;
+    padding-left: 40px;
+    padding-top: 60px;
 }
 
+.logo img {
+    width: 120px;
+   
+}
 
 
 .searchAndInfo-container{
