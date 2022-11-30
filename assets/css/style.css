@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'coolvetica', 'sans';
     
 }
 
@@ -30,8 +31,8 @@
 .searchAndInfo-container{
     width: 30%;
     padding-left: 50px;
-    background-color: #b2b2b2;
-    opacity: 30%;
+    background-color: #7b7878;
+    opacity: 50%;
 
 }
 
@@ -39,14 +40,23 @@
     background-color: transparent;
     width: 70%;
     height: 60px;
-    margin: 10px;
+    padding-top: 25px;
     outline: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 26px;
+    border-bottom: 3px solid #A1A1A1;
+    border-top: none;
+    border-left: none;
+    
+}
+
+.searcher::placeholder{
+    color: #fff;
 }
 
 .search{
-    width: 100%;  
+    width: 100%; 
+ 
 }
 
 .search-button{
@@ -62,5 +72,13 @@
     opacity: 65%;
     padding: 5px;
   
+}
+
+#temperatura {
+    font-size: 100px;
+    color: #fff;
+    padding-left: 80px;
+    
+
 }
 
