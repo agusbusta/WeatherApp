@@ -24,7 +24,7 @@ const armaDatos = (data, history) =>{
  
     document.getElementById("temperatura").innerHTML = datos.data[0].temp
     document.getElementById("cityName").innerHTML = datos.data[0].city_name
-    document.getElementById("cityDate").innerHTML = datos.data[0].datetime
+    document.getElementById("cityDate").innerHTML = datos.data[0].ob_time
  
     document.getElementById("humityWeather").innerHTML = datos.data[0].rh
     document.getElementById("windWeather").innerHTML = datos.data[0].wind_spd
