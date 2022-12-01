@@ -4,7 +4,7 @@ const obterUbicacion = async()=>{
     const ciudad = document.getElementById('searcher').value;
     historialArray.push(ciudad)
     document.getElementById('searcher').value = ""
-    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=d5b67500387f4c459a2bbeb504970882`)
+    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=8ab2c715a00549b3a4360e399ec4b9e7`)
     .then(response => response.json())
     .then(data => armaDatos(JSON.stringify(data), JSON.stringify(historialArray) ));
 }
