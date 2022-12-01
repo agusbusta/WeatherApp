@@ -1,12 +1,12 @@
 let historialArray = []
-
+ 
 const obterUbicacion = async()=>{
     const ciudad = document.getElementById('searcher').value;
     historialArray.push(ciudad)
     document.getElementById('searcher').value = ""
-    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=8ab2c715a00549b3a4360e399ec4b9e7`)
+    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=87756bfd737b4bfd8825a7ea55cfddde`)
     .then(response => response.json())
-    .then(data => armaDatos(JSON.stringify(data), JSON.stringify(historialArray) ));
+    .then(data => armaDatos(JSON.stringify(data), JSON.stringify(historialArray)));
 }
  
 const armaDatos = (data, history) =>{
