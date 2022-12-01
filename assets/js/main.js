@@ -1,10 +1,10 @@
 let historialArray = []
- 
+
 const obterUbicacion = async()=>{
     const ciudad = document.getElementById('searcher').value;
     historialArray.push(ciudad)
     document.getElementById('searcher').value = ""
-    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=c522ccda026845a4804ab7bf140dd669`)
+    const res = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${ciudad}&key=d5b67500387f4c459a2bbeb504970882`)
     .then(response => response.json())
     .then(data => armaDatos(JSON.stringify(data), JSON.stringify(historialArray) ));
 }
@@ -39,28 +39,39 @@ const armaDatos = (data, history) =>{
     if(datos.data[0].pod == "d"){
         if(codeClima >199 && codeClima < 523){
             // dia lluvioso
-            backgroundImageContent.style.backgroundImage = "url('../assets/img/diaLluvia.jpg')";
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://previews.123rf.com/images/khatuna71/khatuna711802/khatuna71180200054/95056589-d%C3%ADa-lluvioso-en-la-ciudad-tr%C3%A1fico-y-coches-y-gotas-de-lluvia-silueta-de-autob%C3%BAs-borrosa.jpg')";
         }else if((codeClima > 599 && codeClima < 611) || (codeClima > 611 && codeClima < 623)){
             //Dia nieve
-            backgroundImageContent.style.backgroundImage = "url('tuUrl')";
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://www.inoutviajes.com/fotos/20/7974_1_Helsinki_1_credito_Flickr_Jukka.jpg')";
         }else if(codeClima == 800){
             //Dia Despejado
-            backgroundImageContent.style.backgroundImage = "url('../img/DiaDespejado.jpg')";
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://img.freepik.com/fotos-premium/cielo-panoramico-nubes-dia-soleado_355067-1129.jpg')";
         }else if(codeClima > 800 && codeClima < 805){
             //Dia Nublado
-            backgroundImageContent.style.backgroundImage = "url('tuUrl')";
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://cdn.pixabay.com/photo/2022/07/10/12/44/city-7312786_960_720.jpg')";
         }
  
-    }else{
- 
+    }else if (datos.data[0].pod == "n"){
         if(codeClima >199 && codeClima < 523){
-            // dia lluvioso
+            // noche lluvioso
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://st2.depositphotos.com/1785433/5280/i/450/depositphotos_52802543-stock-photo-driving-in-the-rainy-night.jpg')";
         }else if((codeClima > 599 && codeClima < 611) || (codeClima > 611 && codeClima < 623)){
-            //Dia nieve
+            //noche nieve
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://w0.peakpx.com/wallpaper/509/689/HD-wallpaper-new-york-on-a-snowy-winter-night-brooklyn-snowy-winter-city-new-york-snowing-snow-bridge-night.jpg')";
         }else if(codeClima == 800){
-            //Dia Despejado
+            //noche Despejado
+            backgroundImageContent.style.backgroundSize = "cover" 
+            backgroundImageContent.style.backgroundImage = "url('https://www.meteorologiaenred.com/wp-content/uploads/2017/01/cielo.jpg')";
         }else if(codeClima > 800 && codeClima < 805){
-            //Dia Nublado
+            //noche Nublado
+            backgroundImageContent.style.backgroundSize = "cover"
+            backgroundImageContent.style.backgroundImage = "url('https://img.fotocommunity.com/noche-nublada-5773b154-2e7f-4d07-85c3-ee4a9501625a.jpg?height=1080')"; 
         }
     }
  

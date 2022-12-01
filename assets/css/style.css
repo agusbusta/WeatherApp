@@ -6,7 +6,8 @@
  
 .backGroundMain{
     z-index: -2;
-    background-image: url("../img/diaLluvia.jpg");
+    background-color: rgb(108, 108, 108);
+    background-image: none;
     filter: brightness(70%);
     position: absolute;
     top: 0;
@@ -101,7 +102,7 @@
 }
  
 .search-button:hover{
-    background-color: #454444;
+    background-color: #737373;
 }
  
 .lupa{
