@@ -112,10 +112,20 @@
 #temperatura {
     font-size: 100px;
     color: #fff;
-    padding-left: 80px;
+    padding-left: 100px;
+    padding-bottom: 80px;
     font-weight: 800;
  
 }
+
+.gradeC{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 800;
+    padding-bottom: 80px;
+ 
+}
+
  
 .ContentSearchBar{
     display: flex;
@@ -126,6 +136,7 @@
 .cityList, .weatherDetails{
     margin-top: 10px;
     height: 200px;
+
 }
  
 #cityName, #cityDate{
@@ -145,6 +156,7 @@
 #ciudad{
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
  
 #cityName{
