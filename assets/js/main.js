@@ -21,11 +21,13 @@ const armaDatos = (data, history) =>{
     myvar +=`</ul>`
  
     document.getElementById("cityList").innerHTML = myvar
- 
     document.getElementById("temperatura").innerHTML = datos.data[0].temp
     document.getElementById("cityName").innerHTML = datos.data[0].city_name
-    document.getElementById("cityDate").innerHTML = datos.data[0].ob_time
- 
+    const fechaHoraAPI = datos.data[0].ob_time;
+    const horaAPI = fechaHoraAPI.substring(11, 13);
+    const nuevaHora = parseInt(horaAPI) - 3;
+    const nuevaFechaHora = fechaHoraAPI.replace(horaAPI, nuevaHora.toString());
+    document.getElementById("cityDate").innerHTML = nuevaFechaHora;
     document.getElementById("humityWeather").innerHTML = datos.data[0].rh
     document.getElementById("windWeather").innerHTML = datos.data[0].wind_spd
     document.getElementById("feelsLikeWeather").innerHTML = datos.data[0].app_temp
